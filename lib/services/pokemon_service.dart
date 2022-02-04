@@ -7,7 +7,7 @@ class PokemonService {
   static Future<List<Pokemon>> fetchPokemonList() async {
     try {
       final resp = await http.get(
-        Uri.parse('https://jsonkeeper.com/b/GFH6'),
+        Uri.parse('https://jsonkeeper.com/b/GXGP'),
       );
 
       final Map<String, dynamic> decoded = jsonDecode(resp.body);
