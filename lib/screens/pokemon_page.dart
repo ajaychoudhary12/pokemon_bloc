@@ -19,7 +19,7 @@ class _PokemonPageState extends State<PokemonPage> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
-          elevation: 0,
+          elevation: 1,
           title: Text(
             widget.title,
             style: TextStyle(color: Colors.black),
