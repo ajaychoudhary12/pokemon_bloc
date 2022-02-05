@@ -24,6 +24,22 @@ class _PokemonPageState extends State<PokemonPage> {
             widget.title,
             style: TextStyle(color: Colors.black),
           ),
+          actions: [
+            BlocBuilder<PokemonBloc, PokemonState>(
+              builder: (ctx, _) {
+                return IconButton(
+                  icon: Icon(
+                    Icons.refresh,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    final bloc = BlocProvider.of<PokemonBloc>(ctx);
+                    bloc.add(FetchPokemonEvent());
+                  },
+                );
+              },
+            ),
+          ],
         ),
         body: BlocBuilder<PokemonBloc, PokemonState>(
           builder: (context, state) {
